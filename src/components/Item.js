@@ -7,7 +7,7 @@ function Item({ name, category }) {
     <li className={itemClass}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className={!!itemClass?"remove":"add"} onClick={() => updateItem(!!itemClass?"":"in-cart")}>{!!itemClass?"Remove from Cart":"Add to Cart"}</button>
+      <button className="add" onClick={() => updateItem(!!itemClass?"":"in-cart")}>{!!itemClass?"Remove from Cart":"Add to Cart"}</button>
     </li>
   );
 }
