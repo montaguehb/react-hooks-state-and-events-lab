@@ -3,10 +3,10 @@ import Item from "./Item";
 import { useState } from "react"
 
 function ShoppingList({ items }) {
-  const [category, updateCategory] = useState("")
-  const filter = (item) => {
-    if(item.category === category || !category) {
-      return <Item key={item.id} name={item.name} category={item.category} />
+  const [categorys, updateCategory] = useState("")
+  const filter = ({category, id, name}) => {
+    if(category === category || !category) {
+      return <Item key={id} name={name} category={category} />
     }
   }
   return (
